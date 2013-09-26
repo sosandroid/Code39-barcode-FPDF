@@ -149,9 +149,13 @@ function draw_code39($code, $x, $y, $w, $h){
 
     for($i=0; $i<strlen($code); $i++)
     {
-        if($code{$i} == '1')
+        if($code{$i} == '1') {
             $this->Rect($x+$i*$w, $y, $w, $h, 'F');
-    }
+        }
+        else {
+           //else cond added by Roger V. form Alcatel-Lucent to cope with small size printed barcodes
+           $x += 0.02;
+        }
 }
 }
 ?> 
