@@ -1,7 +1,7 @@
 Code39-barcode-FPDF
 ===================
 
-PHP class to draw Code39 bar codes in PDF files using FPDF library
+PHP class to draw Code39 bar codes in PDF files using FPDF library.
 This class supports both standard and extended Code 39 barcodes. The extended mode provides access to the full ASCII range (from 0 to 127). The class also gives the possibility to add a checksum.
 
 ## Usage
