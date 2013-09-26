@@ -7,7 +7,9 @@ This class supports both standard and extended Code 39 barcodes. The extended mo
 ## Usage
 
 
+```php
 Code39(float x, float y, string code [, boolean ext [, boolean cks [, float w [, float h [, boolean wide]]]]])
+```
 
 - x: abscissa
 - y: ordinate
