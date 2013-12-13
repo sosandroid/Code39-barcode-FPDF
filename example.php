@@ -4,6 +4,6 @@ require('code39.php');
 
 $pdf=new PDF_Code39();
 $pdf->AddPage();
-$pdf->Code39(60, 30, 'Code 39 on GitHub');
+$pdf->Code39(10, 30, 'Code 39 on GitHub');
 $pdf->Output();
 ?> 

@@ -156,6 +156,9 @@ function draw_code39($code, $x, $y, $w, $h){
            //else cond added by Roger V. form Alcatel-Lucent to cope with small size printed barcodes
            $x += 0.02;
         }
+	}
 }
+
+//end class
 }
 ?> 
