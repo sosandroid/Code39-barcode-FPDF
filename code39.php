@@ -3,13 +3,14 @@
 /**
  * @file code39.php
  * @author  SOSAndroid
- * @version 1.0.2
+ * @version 1.1.0
  * @date 2019-10-21
  *
  * Release history : 
  *	v1.0.0 : first release 2004
  *	v1.0.1 : Roger V. form Alcatel-Lucent to cope with small size printed barcodes
  *	v1.0.2 : Improvement for small labels draw by @gillouz
+ *	v1.1.0 : Quick refactor, move constants out of the code
  *
  *
  * @section LICENSE
