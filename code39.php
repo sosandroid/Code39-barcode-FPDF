@@ -1,4 +1,12 @@
  <?php
+/********************
+* FPDF class extension to draw Code39 bar codes in PDF document. Can be used for labels
+*
+* Version 1.0.2 - Oct 2019
+*
+* Release history : improvement for small labels draw by @gillouz
+*
+*********************/
 require('fpdf.php');
 
 class PDF_Code39 extends FPDF {
@@ -143,20 +151,20 @@ function encode_code39_ext($code) {
     return $code_ext;
 }
 
-function draw_code39($code, $x, $y, $w, $h){
+function draw_code39($code, $x, $y, $w, $h) { 
 
-    //Draw bars
-
-    for($i=0; $i<strlen($code); $i++)
-    {
-        if($code{$i} == '1') {
-            $this->Rect($x+$i*$w, $y, $w, $h, 'F');
-        }
-        else {
-           //else cond added by Roger V. form Alcatel-Lucent to cope with small size printed barcodes
-           $x += 0.02;
-        }
-	}
+	//Draw bars 
+	for($i=0; $i<strlen($code); $i++) { 
+		if($code[$i] == '1') { 
+			// set color as black
+			$this->SetFillColor(0,0,0);
+		} 
+		else { 
+			// set color as white
+			$this->SetFillColor(255,255,255); 
+		}
+		$this->Rect($x+$i*$w, $y, $w , $h, 'F');
+	} 
 }
 
 //end class
